@@ -12,7 +12,7 @@ jobs:
   depSubmissionAPIUpload:
     permissions:
       security-events: write
-      contents: read
+      contents: write
     name: Analyze
     runs-on: 'ubuntu-latest'
     steps:
