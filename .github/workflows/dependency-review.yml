@@ -10,8 +10,6 @@ permissions:
 
 jobs:
   dependency-review:
-    permissions:
-      security-events: write
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout Repository'
