@@ -43,7 +43,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-        - language: java
+        - language: java-kotlin
           build-mode: manual # This mode only analyzes Java. Set this to 'autobuild' or 'manual' to analyze Kotlin too.
         - language: javascript-typescript
           build-mode: none
@@ -78,15 +78,15 @@ jobs:
     # to build your code.
     # ℹ️ Command-line programs to run using the OS shell.
     # 📚 See https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsrun
-    - if: matrix.language == 'java'  
-      name: Set up java 17
+    - if: matrix.language == 'java-kotlin'  
+      name: Set up java 21
       uses: actions/setup-java@v3
       with:
           distribution: 'temurin'
-          java-version: 17
+          java-version: 21
           architecture: x64
                  
-    - if: matrix.language == 'java' 
+    - if: matrix.language == 'java-kotlin' 
       name: Build with Maven
       run: mvn -B package --file pom.xml
 
