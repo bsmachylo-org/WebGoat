@@ -65,7 +65,7 @@ jobs:
       with:
         languages: ${{ matrix.language }}
         build-mode: ${{ matrix.build-mode }}
-        config-file: ./bsmachylo-org/security-team-codeql-config/codeql/codeql-config.yml
+        config-file: bsmachylo-org/security-team-codeql-config/codeql/codeql-config.yml@main
         external-repository-token: ${{ secrets.ACCESS_TOKEN }}
         # config: |
         #   paths-ignore:
